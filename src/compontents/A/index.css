@@ -1,0 +1,6 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to right,red 0%, blue 80%,transparent);
+}
