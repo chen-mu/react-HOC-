@@ -18,6 +18,10 @@ import RefForward from './refForward/index'
 import NormalRef from './refForward/normal'
 import ClassForward from './refForward/classRefForward'
 
+import Portal from './portal/index'
+
+import ForwardRef from './refForwarfCompontent/index'
+
 
 function App() {
   return (
@@ -30,16 +34,20 @@ function App() {
         <Home></Home>
       </Provider> */}
       {/* <Demo></Demo> */}
+      <ForwardRef></ForwardRef>
       {/* <Refcomponent></Refcomponent> */}
       {/* <RefDemo></RefDemo> */}
       {/* <Demo1></Demo1> */}
-      <Fragment></Fragment>
+      {/* <Fragment></Fragment>
       <RefForward></RefForward>
       <div>
         <NormalRef></NormalRef>
       </div>
       <div>
         <ClassForward></ClassForward>
+      </div> */}
+      <div>
+        {/* <Portal></Portal> */}
       </div>
     </div>
   );

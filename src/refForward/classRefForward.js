@@ -7,7 +7,8 @@ class InputChild extends React.Component {
     }
 
     onDemo = () => {
-
+        console.log('------')
+        console.log(11111);
     }
 
     render() {
@@ -30,6 +31,8 @@ export default class App extends React.Component {
     //在父组件获取子组件的ref
     componentDidMount() {
         console.log('class中的');
+        this.icRef.current.onDemo();
+        console.log(this.icRef.current.inputRef);
         this.icRef.current.inputRef.current.focus() // input 获取焦点
     }
 

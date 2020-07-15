@@ -3,17 +3,24 @@ import React from 'react';
 
 import  Compontent1  from './compontent'
 
-// @Compontent1({name:'122333444'})
-class Example extends React.Component {
+@Compontent1()
+export default class Example extends React.Component {
+
+  constructor(){
+    super();
+    this.state={};
+    this.input = React.createRef
+  }
   componentDidMount(){
-    console.log('页面中的componentDidMount');
+    console.log(this.input)
 }
     render() {
-      return <input name="name" {...this.props.name} />;
+      return <input ref={this.input} name="name" {...this.props.name} />;
     }
   }
-// export default page
-export default Compontent1({name:'袁'})(Example)
+  
+
+// export default Compontent1({name:'袁'})(Example)
 // export default page({name:'袁'})(Compontent1)
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 /**
  * refs转发指的是将父组件创建的ref传递给子组件的某个dom元素让父组件可以直接操作dom元素
+ * 注意：refs转发指的是将父组件的ref转发给自组件的一个过程
  * 参考文章：https://www.codercto.com/a/89749.html
  */
 
@@ -34,6 +35,6 @@ export default class Index extends React.Component {
     }
     
     render() {    
-        return <FancyButton ref={this.ref} className='demo' >点击!</FancyButton>;
+        return <FancyButton ref={this.ref} className='demo' name='yuan' >点击!</FancyButton>;
     }
 } 
