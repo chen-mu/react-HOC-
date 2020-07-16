@@ -22,6 +22,8 @@ import Portal from './portal/index'
 
 import ForwardRef from './refForwarfCompontent/index'
 
+import BarrierFree from './barrierFree/index'
+
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
         <Home></Home>
       </Provider> */}
       {/* <Demo></Demo> */}
-      <ForwardRef></ForwardRef>
+      {/* <ForwardRef></ForwardRef> */}
       {/* <Refcomponent></Refcomponent> */}
       {/* <RefDemo></RefDemo> */}
       {/* <Demo1></Demo1> */}
@@ -49,6 +51,9 @@ function App() {
       <div>
         {/* <Portal></Portal> */}
       </div>
+      <BarrierFree></BarrierFree>
+
+
     </div>
   );
 }
