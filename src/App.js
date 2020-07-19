@@ -20,6 +20,8 @@ import BarrierFree from './barrierFree/index'
 import RenderProps from './renderProps/index'
 import Component from './pureComponent/index'
 import SetState from './setState/index'
+import Portals from './portals/index'
+import PCPassValue from './PCPassValue/index'
 
 
 function App() {
@@ -52,7 +54,9 @@ function App() {
 
       {/* <RenderProps></RenderProps> */}
       {/* <Component></Component> */}
-      <SetState></SetState>
+      {/* <SetState></SetState> */}
+      {/* <Portals></Portals> */}
+      <PCPassValue></PCPassValue>
 
     </div>
   );
