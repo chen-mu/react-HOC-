@@ -22,6 +22,9 @@ import Component from './pureComponent/index'
 import SetState from './setState/index'
 import Portals from './portals/index'
 import PCPassValue from './PCPassValue/index'
+import Context from './context/index'
+import Hooks from './hooks/index'
+import Ceiling from './ceiling/index'
 
 
 function App() {
@@ -56,7 +59,10 @@ function App() {
       {/* <Component></Component> */}
       {/* <SetState></SetState> */}
       {/* <Portals></Portals> */}
-      <PCPassValue></PCPassValue>
+      {/* <PCPassValue></PCPassValue> */}
+      {/* <Context></Context> */}
+      <Hooks></Hooks>
+      {/* <Ceiling></Ceiling> */}
 
     </div>
   );
