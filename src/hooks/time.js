@@ -17,21 +17,21 @@ export default class Index extends React.Component {
             hour = Math.floor(leftTime / (1000 * 60 * 60) % 24),
             minute = Math.floor((leftTime / (1000 * 60) % 60)),
             second = Math.floor(leftTime / 1000 % 60),
-            timeMilliseSecond = parseInt((leftTime / 100) % 9 + 1);
+            timeMilliseSecond = parseInt((leftTime / 10) % 99 + 1);
         return {
             leftTime: leftTime,
-            day: day1 < 10 && day1 >= 0 ? '0' + day1 : leftTime < 0 ? '0' : day1,
-            hours: hour < 10 && hour >= 0 ? '0' + hour : leftTime < 0 ? '0' : hour,
-            minute: minute < 10 && minute >= 0 ? '0' + minute : leftTime < 0 ? '0' : minute,
-            second: second < 10 && second >= 0 ? '0' + second : leftTime < 0 ? '0' : second,
-            mill: leftTime < 0 ? '0' : timeMilliseSecond
+            day: day1 < 10 && day1 >= 0 ? '0' + day1 : leftTime < 0 ? '00' : day1,
+            hours: hour < 10 && hour >= 0 ? '0' + hour : leftTime < 0 ? '00' : hour,
+            minute: minute < 10 && minute >= 0 ? '0' + minute : leftTime < 0 ? '00' : minute,
+            second: second < 10 && second >= 0 ? '0' + second : leftTime < 0 ? '00' : second,
+            mill: timeMilliseSecond < 10 && timeMilliseSecond >= 0 ? '0' + timeMilliseSecond : leftTime < 0 ? '00' : timeMilliseSecond
         };
     };
 
     countDownTime = () => {
         let time = {}, timer;
         timer = setInterval(() => {
-            time = this.CountDownNew('1595500237099');
+            time = this.CountDownNew('1595565257099');
 
             if (this.timeD.current && this.timeH.current && this.timeM.current && this.timeS.current && this.timeMS.current) {
                 this.timeD.current.innerText = time.day || 0;
@@ -44,17 +44,17 @@ export default class Index extends React.Component {
             if (time.leftTime < 0) {
                 clearInterval(timer);
             }
-        }, 1);
+        }, 8);
     }
 
     componentDidMount() {
         this.countDownTime()
-        setInterval(() => {
-            console.log(1111)
-        }, 1000);
-        setTimeout(() => {
-            console.log(222);
-        }, 1000);
+        // setInterval(() => {
+        //     console.log(1111)
+        // }, 1000);
+        // setTimeout(() => {
+        //     console.log(222);
+        // }, 1000);
 
 
     }
