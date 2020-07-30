@@ -37,7 +37,7 @@ add = () => {
             count: prevState.count + 1
         }));
     }
-这样，每次改变count时，都是prevState.count + 1，pervState是前一个状态，当每次setState之后，前一个状态都会改变，结果就是想要的3了。
+这样，每次改变count时，都是prevState.count + 1，pervState是上一个状态的state，当每次setState之后，前一个状态都会改变，结果就是想要的3了。
 如果需要立即setState 那么就需要传入一个函数来执行setState
  * 
 
@@ -54,10 +54,18 @@ class Demo extends Component {
     }
 
     updateCount = (payload) => {
-        console.log(payload);
-        this.setState(state => ({
-            demoCount: { ...state.demoCount, ...payload }
-        }))
+        // console.log(payload);
+        this.setState((state, props) => {
+            console.log(state.demoCount);
+
+            console.log('props', props);
+            let currDemoCount = { ...state.demoCount, ...payload }
+            return { demoCount: currDemoCount }
+        }, () => { console.log(this.state.demoCount); })
+
+        // this.setState({
+        //     demoCount: { ...this.state.demoCount, ...payload }
+        // }, () => console.log(this.state.demoCount))
     }
 
     /**异步更新：react事件监听回调里，setState是异步更新的 */
