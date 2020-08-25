@@ -10,9 +10,9 @@ export default class Index extends React.Component {
 
     render() {
         return (<div>
-            {/* <UserEffect></UserEffect>
+            <UserEffect></UserEffect>
             <UserReducer></UserReducer>
-            <Timer></Timer> */}
+            <Timer></Timer>
             <SetState></SetState>
         </div>)
     }
