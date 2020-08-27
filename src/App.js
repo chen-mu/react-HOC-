@@ -26,6 +26,8 @@ import Context from './context/index'
 import Hooks from './hooks/index'
 import Ceiling from './ceiling/index'
 
+import Button from './button/index'
+
 
 function App() {
   return (
@@ -61,7 +63,8 @@ function App() {
       {/* <Portals></Portals> */}
       {/* <PCPassValue></PCPassValue> */}
       {/* <Context></Context> */}
-      <Hooks></Hooks>
+      {/* <Hooks></Hooks> */}
+      <Button />
       {/* <Ceiling></Ceiling> */}
 
     </div>
