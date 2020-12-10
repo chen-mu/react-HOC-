@@ -1,0 +1,33 @@
+.page__content {
+    display: relative;
+    height: 100vw;
+    width: 100vw;
+}
+
+.content__top {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(200, 200, 200, 0.5);
+    height: 90vw;
+    width: 100vw;
+    /* pointer-events: none */
+}
+
+.content__bottom {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: chocolate;
+    height: 100vw;
+    width: 100vw;
+}
+
+.show {
+    position: absolute;
+    top: 102vw;
+}
