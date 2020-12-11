@@ -29,12 +29,14 @@ import Ceiling from './ceiling/index'
 import Button from './button/index'
 
 import Listener from './listener/index'
+import Exposure from './exposure/index'
 
 
 function App() {
   return (
     <div className="App">
-      <Listener></Listener>
+      <Exposure></Exposure>
+      {/* <Listener></Listener> */}
       {/* <Bdemo></Bdemo> */}
       {/* <Fdemo></Fdemo> */}
       {/* <Ddemo></Ddemo> */}
