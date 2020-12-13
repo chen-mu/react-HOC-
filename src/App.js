@@ -32,10 +32,11 @@ import Listener from './listener/index'
 import Exposure from './exposure/index'
 
 
+
 function App() {
   return (
     <div className="App">
-      <Exposure></Exposure>
+      {/* <Exposure></Exposure> */}
       {/* <Listener></Listener> */}
       {/* <Bdemo></Bdemo> */}
       {/* <Fdemo></Fdemo> */}
@@ -68,7 +69,7 @@ function App() {
       {/* <Portals></Portals> */}
       {/* <PCPassValue></PCPassValue> */}
       {/* <Context></Context> */}
-      {/* <Hooks></Hooks> */}
+      <Hooks></Hooks>
       {/* <Button /> */}
       {/* <Ceiling></Ceiling> */}
 

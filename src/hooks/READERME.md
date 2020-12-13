@@ -1,0 +1,13 @@
+memo
+memo是只能在函数组件中使用的，类似于class组件中的pureComponent。pureComponent只能对组件中的props和state进行浅层对比。memo第一个参数传入组件，而可以在第二个参数中传入一个函数，其中包含对数据的对比，可以实现深层对比。此时就类似于shouldComponentUpdate。
+第二个参数要返回false才会触发渲染
+
+useMemo
+memo只能实现组件内所有部分都不重渲染，而useMemo可以实现只让部分不重新渲染。第一个参数传入处理函数，第二个参数传入依赖项。只有依赖项改变时，才会执行处理函数，类似于Vue中的computed计算属性。
+
+在render生命周期中进行
+
+useCallback
+参数与useMemo相类似，但是useCallback返回的是函数，而不是函数执行结果
+依赖项数组不会作为参数传给回调函数。虽然从概念上来说它表现为：所有回调函数中引用的值都应该出现在依赖项数组中。
+
