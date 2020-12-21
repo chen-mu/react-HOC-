@@ -30,7 +30,7 @@ export default class Example extends React.Component {
         const dom = document.querySelectorAll('.demo')
         console.log('dom==>', dom);
         dom.forEach(item => {
-            intersectionObserver.observe(item) //observe只能监听一个目标元素
+            intersectionObserver.observe(item) //observe只能监听一个目标元素，所以采用遍历的形式去获取
         })
     }
 

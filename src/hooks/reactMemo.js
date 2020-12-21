@@ -14,7 +14,7 @@ function areEqual(prevProps, nextProps) {
     if (prevProps.title !== nextProps.title) {
         return true
     } else {
-        //在mome中，reture false才会触发渲染
+        //在mome中，reture false
         return false
     }
 

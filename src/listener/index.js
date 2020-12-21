@@ -33,13 +33,12 @@ export default class Example extends React.Component {
         const { count } = this.state
         return <div className="page__content">
             <div className="content__top">
+                <div className="demo" onClick={() => console.log('点击了11111')} >11111111</div>
                 absolute上层
-                <div className="content__bottom ">
-                    absolute下层
             </div>
+            <div className="content__bottom ">
+                absolute下层
             </div>
-
-
 
             <div className='show' onClick={this.changeCount}>点击了下层事件{count}</div>
 

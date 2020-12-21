@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import UserEffect from './useEffect'
 import UserReducer from './useReducer'
 import Timer from './time'
@@ -8,7 +8,12 @@ import UserMemo from './useMemo'
 
 export default class Index extends React.Component {
 
-
+    componentDidMount() {
+        let demo = [1, 2, 3, 4]
+        const demo1 = demo.every(u => u >= 4)
+        console.log('demo1====>', demo1);
+        console.log('demo1====>', demo.length = 2, demo);
+    }
 
     render() {
         return (<div>
