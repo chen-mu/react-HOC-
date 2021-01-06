@@ -1,18 +1,31 @@
 //页面
 import React from 'react';
 import './index.css'
+import img1 from './images/1.jpg'
+import img2 from './images/2.jpg'
+import img3 from './images/3.jpg'
+import img4 from './images/4.jpg'
+import img5 from './images/5.jpg'
+import img6 from './images/6.jpg'
+import img7 from './images/7.jpg'
+import img8 from './images/8.jpg'
+import img9 from './images/9.jpg'
+import img10 from './images/10.jpg'
 
 // 页面中曝光demo
 export default class Example extends React.Component {
 
-
     isExprose = []
+
+    state = {
+        imgs: ['./images/1.jpg']
+    }
 
     componentDidMount() {
         const intersectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entriesItem => {
                 if (entriesItem.intersectionRatio) {
-                    if (this.isExprose.indexOf(entriesItem.target.id) === -1) {
+                    if (this.isExprose.indexOf(entriesItem.target.id) === -1) { //检查元素是否出现在页面的判断条件
                         this.isExprose.push(entriesItem.target.id)
                         console.log(entriesItem.target.id + '出现了');
                     }
@@ -27,7 +40,7 @@ export default class Example extends React.Component {
         }
         );
 
-        const dom = document.querySelectorAll('.demo')
+        const dom = document.querySelectorAll('img')
         console.log('dom==>', dom);
         dom.forEach(item => {
             intersectionObserver.observe(item) //observe只能监听一个目标元素，所以采用遍历的形式去获取
@@ -35,11 +48,23 @@ export default class Example extends React.Component {
     }
 
     render() {
+        const { imgs } = this.setState;
         return <div>
             <div id='100' className="exposure__content--one demo" > 100</div>
             <div className="exposure__content" >
                 <div id='1' className="exposure__content--one demo" > 1</div>
                 <div id='2' className="exposure__content--two demo" > 2</div>
+                <img alt='' className="image-demo" src={img1}></img>
+                <img alt='' className="image-demo" src={img2}></img>
+                <img alt='' className="image-demo" src={img3}></img>
+                <img alt='' className="image-demo" src={img4}></img>
+                <img alt='' className="image-demo" src={img5}></img>
+                <img alt='' className="image-demo" src={img6}></img>
+                <img alt='' className="image-demo" src={img7}></img>
+                <img alt='' className="image-demo" src={img8}></img>
+                <img alt='' className="image-demo" src={img9}></img>
+                <img alt='' className="image-demo" src={img10}></img>
+
                 <div id='3' className="exposure__content--three demo">3</div>
                 <div id='4' className="exposure__content--four demo">4</div>
                 <div id='5' className="exposure__content--five demo">5</div>

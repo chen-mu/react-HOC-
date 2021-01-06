@@ -1,43 +1,46 @@
 import React from 'react';
-import { Provider } from 'mobx-react';
-import store from './store';
-import Home from './pages/home/index'
-import Bdemo from './compontents/B';
-import Ddemo from './compontents/D';
-import Fdemo from './compontents/F';
-import Recomment from './pages/recomment/index'
-import Refcomponent from './refcomponent/index'
-import Demo from './demo/index'
-import Demo1 from './demo1/index'
-import RefDemo from './refDemo/index'
-import Fragment from './fragments/index'
-import RefForward from './refForward/index'
-import NormalRef from './refForward/normal'
-import ClassForward from './refForward/classRefForward'
-import Portal from './portal/index'
-import ForwardRef from './refForwarfCompontent/index'
-import BarrierFree from './barrierFree/index'
-import RenderProps from './renderProps/index'
-import Component from './pureComponent/index'
-import SetState from './setState/index'
-import Portals from './portals/index'
-import PCPassValue from './PCPassValue/index'
-import Context from './context/index'
-import Hooks from './hooks/index'
-import Ceiling from './ceiling/index'
+// import { Provider } from 'mobx-react';
+// import store from './store';
+// import Home from './pages/home/index'
+// import Bdemo from './compontents/B';
+// import Ddemo from './compontents/D';
+// import Fdemo from './compontents/F';
+// import Recomment from './pages/recomment/index'
+// import Refcomponent from './refcomponent/index'
+// import Demo from './demo/index'
+// import Demo1 from './demo1/index'
+// import RefDemo from './refDemo/index'
+// import Fragment from './fragments/index'
+// import RefForward from './refForward/index'
+// import NormalRef from './refForward/normal'
+// import ClassForward from './refForward/classRefForward'
+// import Portal from './portal/index'
+// import ForwardRef from './refForwarfCompontent/index'
+// import BarrierFree from './barrierFree/index'
+// import RenderProps from './renderProps/index'
+// import Component from './pureComponent/index'
+// import SetState from './setState/index'
+// import Portals from './portals/index'
+// import PCPassValue from './PCPassValue/index'
+// import Context from './context/index'
+// import Hooks from './hooks/index'
+// import Ceiling from './ceiling/index'
 
-import Button from './button/index'
+// import Button from './button/index'
 
-import Listener from './listener/index'
-import Exposure from './exposure/index'
+// import Listener from './listener/index'
+// import Exposure from './exposure/index'
+
+import LifeCycle from './LifeCycle/index'
 
 
 
 function App() {
   return (
     <div className="App">
+      <LifeCycle></LifeCycle>
       {/* <Exposure></Exposure> */}
-      <Listener></Listener>
+      {/* <Listener></Listener> */}
       {/* <Bdemo></Bdemo> */}
       {/* <Fdemo></Fdemo> */}
       {/* <Ddemo></Ddemo> */}
