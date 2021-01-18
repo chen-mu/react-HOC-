@@ -1,29 +1,48 @@
 import React from 'react';
 
+
 // Context 可以让我们无须明确地传遍每一个组件，就能将值深入传递进组件树。
 // 为当前的 theme 创建一个 context（“light”为默认值）。
-const ThemeContext = React.createContext({ them: 'light' });
+const ThemeContext = React.createContext();
+
 // const ThemeValue = React.createContext('demo')
 export default class Context extends React.Component {
+
+    state = {
+        demo: {
+            theme: 'dark',
+            name: '12321'
+        }
+
+    }
+
+
     render() {
+        const { demo } = this.state
         // 使用一个 Provider 来将当前的 theme 传递给以下的组件树。
         // 无论多深，任何组件都能读取这个值。
         // 在这个例子中，我们将 “dark” 作为当前的值传递下去。
         return (
-            <ThemeContext.Provider value={{ them: "dark", name: '1111' }}>
+            <ThemeContext.Provider value={this.state.demo}>
                 <Toolbar />
+                <button onClick={() => this.setState({
+                    demo: { ...demo, theme: '变', name: '2324' }
+                })}>改变demo</button>
             </ThemeContext.Provider>
         );
     }
 }
 
 // 中间的组件再也不必指明往下传递 theme 了。
-function Toolbar() {
-    return (
-        <div>
+class Toolbar extends React.Component {
+    static contextType = ThemeContext;
+    render() {
+        return <React.Fragment>
+            <div >{this.context.theme}</div>
+            <div >{this.context.name}</div>
             <ThemedButton />
-        </div>
-    );
+        </React.Fragment>
+    }
 }
 
 class ThemedButton extends React.Component {
@@ -35,7 +54,7 @@ class ThemedButton extends React.Component {
     render() {
         console.log(this.context)
         return <>
-            <button >{this.context.them}</button>
+            <button >{this.context.theme}</button>
             <button >{this.context.name}</button>
         </>
             ;

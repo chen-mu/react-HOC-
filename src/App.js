@@ -9,7 +9,7 @@ import React from 'react';
 // import Refcomponent from './refcomponent/index'
 // import Demo from './demo/index'
 // import Demo1 from './demo1/index'
-// import RefDemo from './refDemo/index'
+import RefDemo from './refDemo/index'
 // import Fragment from './fragments/index'
 // import RefForward from './refForward/index'
 // import NormalRef from './refForward/normal'
@@ -22,8 +22,8 @@ import React from 'react';
 // import SetState from './setState/index'
 // import Portals from './portals/index'
 // import PCPassValue from './PCPassValue/index'
-// import Context from './context/index'
-// import Hooks from './hooks/index'
+import Context from './context/index'
+import Hooks from './hooks/index'
 // import Ceiling from './ceiling/index'
 
 // import Button from './button/index'
@@ -31,14 +31,16 @@ import React from 'react';
 // import Listener from './listener/index'
 // import Exposure from './exposure/index'
 
-import LifeCycle from './LifeCycle/index'
+// import LifeCycle from './LifeCycle/index'
+import Debounce from './debounce/index'
 
 
 
 function App() {
   return (
     <div className="App">
-      <LifeCycle></LifeCycle>
+      {/* <Debounce></Debounce> */}
+      {/* <LifeCycle></LifeCycle> */}
       {/* <Exposure></Exposure> */}
       {/* <Listener></Listener> */}
       {/* <Bdemo></Bdemo> */}
@@ -72,7 +74,7 @@ function App() {
       {/* <Portals></Portals> */}
       {/* <PCPassValue></PCPassValue> */}
       {/* <Context></Context> */}
-      {/* <Hooks></Hooks> */}
+      <Hooks></Hooks>
       {/* <Button /> */}
       {/* <Ceiling></Ceiling> */}
 
