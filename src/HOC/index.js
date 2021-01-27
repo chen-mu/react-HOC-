@@ -1,10 +1,10 @@
 import React from 'react';
-import Demo1 from './demo'
+import HOC from './HOC'
 
-@Demo1({
-    num1: 1
-})
-export default class Index extends React.Component {
+// @HOC({
+//     num1: 1
+// })
+class Index extends React.Component {
 
     state = {
         num1: 0,
@@ -12,7 +12,7 @@ export default class Index extends React.Component {
     }
 
     componentDidMount() {
-        console.log(234)
+        // console.log(234)
         this.setState({
             num1: 1,
             num2: 2
@@ -22,14 +22,14 @@ export default class Index extends React.Component {
 
     render() {
         console.log(this.props)
+        console.log(this);
         return <div>
             {this.props.num3}
-
-
+            {this.props.children}
         </div>
     }
 }
-// export default Demo1(Index,{num1:1});
+export default HOC(Index, { num1: 2 });
 
 
 

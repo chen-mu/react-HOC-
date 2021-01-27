@@ -8,7 +8,8 @@ export default class BasicInput extends React.Component {
     preventShake = (fn) => {
         let timer = null; // 创建定时器id
         return (name) => {
-            clearTimeout(timer); // input事件频繁触发，清除之前定时器 
+            console.log(111111);
+            clearTimeout('timer====>', timer); // input事件频繁触发，清除之前定时器 
             timer = setTimeout(() => { // 创建新定时器，保证限定时间间隔fn只执行一次
                 console.log('执行');
                 fn(name);

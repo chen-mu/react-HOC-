@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拖拽实现</title>
+    <style type="text/css">
+        .parent {
+            display: flex;
+            width: 450px;
+            justify-content: space-around;
+        }
+
+        .container {
+            height: 300px;
+            width: 200px;
+            background-color: rgba(255, 255, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 100px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+    <script type="text/javascript">
+        function handleOndragstart(event) {
+            // 设置被拖动的数据，可简单理解为设置Box的值为被拖动元素的id。此处为"Box"
+            event.dataTransfer.setData("Box", event.target.id);
+        }
+        function handleOndragover(event) {
+            event.preventDefault();
+        }
+        function handleOndrop(event) {
+            // 拖拽元素被放下时调用
+            event.preventDefault();
+            var data = event.dataTransfer.getData("Box");
+            // 将拖拽元素追加到改放置元素中
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="container" ondragover="handleOndragover(event)" ondrop="handleOndrop(event)">
+            <div class="box" draggable="true" id="Box" ondragstart="handleOndragstart(event)">11111</div>
+        </div>
+        <div class="container" ondragover="handleOndragover(event)" ondrop="handleOndrop(event)">22222</div>
+    </div>
+</body>
+
+</html>

@@ -9,7 +9,7 @@ import React from 'react';
 // import Refcomponent from './refcomponent/index'
 // import Demo from './demo/index'
 // import Demo1 from './demo1/index'
-import RefDemo from './refDemo/index'
+// import RefDemo from './refDemo/index'
 // import Fragment from './fragments/index'
 // import RefForward from './refForward/index'
 // import NormalRef from './refForward/normal'
@@ -24,6 +24,7 @@ import RefDemo from './refDemo/index'
 // import PCPassValue from './PCPassValue/index'
 import Context from './context/index'
 import Hooks from './hooks/index'
+import Nav from './nav/index'
 // import Ceiling from './ceiling/index'
 
 // import Button from './button/index'
@@ -34,11 +35,15 @@ import Hooks from './hooks/index'
 // import LifeCycle from './LifeCycle/index'
 import Debounce from './debounce/index'
 
+import HOC from './HOC/index'
+
 
 
 function App() {
   return (
     <div className="App">
+      <HOC></HOC>
+      <Nav></Nav>
       {/* <Debounce></Debounce> */}
       {/* <LifeCycle></LifeCycle> */}
       {/* <Exposure></Exposure> */}
@@ -74,7 +79,7 @@ function App() {
       {/* <Portals></Portals> */}
       {/* <PCPassValue></PCPassValue> */}
       {/* <Context></Context> */}
-      <Hooks></Hooks>
+      {/* <Hooks></Hooks> */}
       {/* <Button /> */}
       {/* <Ceiling></Ceiling> */}
 
