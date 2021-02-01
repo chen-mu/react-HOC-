@@ -25,6 +25,7 @@ import React from 'react';
 import Context from './context/index'
 import Hooks from './hooks/index'
 import Nav from './nav/index'
+import CSS from './CSS/index'
 // import Ceiling from './ceiling/index'
 
 // import Button from './button/index'
@@ -33,17 +34,20 @@ import Nav from './nav/index'
 // import Exposure from './exposure/index'
 
 // import LifeCycle from './LifeCycle/index'
-import Debounce from './debounce/index'
+// import Debounce from './debounce/index'
 
-import HOC from './HOC/index'
+// import HOC from './HOC/index'
+import FuncComponent from './funcComponent/index'
 
 
 
 function App() {
   return (
     <div className="App">
-      <HOC></HOC>
-      <Nav></Nav>
+      <CSS></CSS>
+      {/* <FuncComponent></FuncComponent> */}
+      {/* <HOC></HOC>
+      <Nav></Nav> */}
       {/* <Debounce></Debounce> */}
       {/* <LifeCycle></LifeCycle> */}
       {/* <Exposure></Exposure> */}

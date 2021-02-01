@@ -5,7 +5,7 @@ import Timer from './time'
 import SetState from './setatate'
 import ReactMemo from './reactMemo'
 import UserMemo from './useMemo'
-
+import UseContext from './useContext'
 export default class Index extends React.Component {
 
     componentDidMount() {
@@ -17,12 +17,13 @@ export default class Index extends React.Component {
 
     render() {
         return (<div>
+            <UseContext></UseContext>
             {/* <UserEffect></UserEffect> */}
             {/* <UserReducer></UserReducer> */}
             {/* <Timer></Timer>
             <SetState></SetState> */}
             {/* <ReactMemo></ReactMemo> */}
-            <UserMemo></UserMemo>
+            {/* <UserMemo></UserMemo> */}
         </div>)
     }
 } 

@@ -21,7 +21,7 @@ function reducer(state, action) {
 function Counter({ initialCount }) {
     const [state, dispatch] = useReducer(reducer, initialCount, init);
     return (
-        <>
+        <React.Fragment>
             Count: {state.count}
             <button
                 onClick={() => dispatch({ type: 'reset', payload: initialCount })}>
@@ -31,7 +31,7 @@ function Counter({ initialCount }) {
                 <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
                 <button onClick={() => dispatch({ type: 'increment' })}>+</button>
             </div>
-        </>
+        </React.Fragment>
     );
 }
 

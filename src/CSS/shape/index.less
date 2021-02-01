@@ -1,0 +1,118 @@
+/* 切角 */
+
+.demo {
+    margin: 20px auto;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    word-wrap: break-word;
+    background: #58a;
+    background: linear-gradient(135deg, transparent 15px, #58a 0) top left, linear-gradient(-135deg, transparent 15px, #58a 0) top right, linear-gradient(-45deg, transparent 15px, #58a 0) bottom right, linear-gradient(45deg, transparent 15px, #58a 0) bottom left;
+    /* background-size不能设置50%，设置50中间会存在白色分割线 */
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+}
+
+/* 圆弧 */
+
+.demo1 {
+    margin: 20px auto;
+    /* height: 100px;
+    width: 100px; */
+    padding: 20px;
+    word-wrap: break-word;
+    background: #58a;
+    background: radial-gradient(circle at top left, transparent 15px, #58a 0) top left, radial-gradient(circle at top right, transparent 15px, #58a 0) top right, radial-gradient(circle at bottom right, transparent 15px, #58a 0) bottom right, radial-gradient(circle at bottom left, transparent 15px, #58a 0) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+}
+
+/* 内圆弧 */
+
+.demo2 {
+    margin: 20px auto;
+    /* height: 100px;
+    width: 100px; */
+    padding: 20px;
+    word-wrap: break-word;
+    background: #58a;
+    background: radial-gradient(circle at bottom left, transparent 15px, #58a 0) top left, radial-gradient(circle at bottom right, transparent 15px, #58a 0) top right, radial-gradient(circle at top right, transparent 15px, #58a 0) bottom right, radial-gradient(circle at top left, transparent 15px, #58a 0) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+}
+
+/* 钟摆效果 */
+
+/* .clock-box {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+} */
+
+.clock {
+    width: 2px;
+    height: 100px;
+    background: #000000;
+    margin: 30px auto;
+    position: relative;
+    animation: go 1s ease-in-out alternate infinite;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -9px;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: #ff0000;
+    }
+}
+
+
+
+@keyframes go {
+    0% {
+        /* -webkit-transform: rotate(30deg);
+        -webkit-transform-origin: top center;
+        -moz-transform: rotate(30deg);
+        -moz-transform-origin: top center; */
+        transform: rotate(30deg);
+        transform-origin: top center;
+    }
+
+    100% {
+        /* -webkit-transform: rotate(-30deg);
+        -webkit-transform-origin: top center;
+        -moz-transform: rotate(-30deg);
+        -moz-transform-origin: top center; */
+        transform: rotate(-30deg);
+        transform-origin: top center;
+    }
+}
+
+/*  */
+
+.demo4 {
+    position: relative;
+    display: inline-block;
+    padding: 100px 50px 0;
+}
+
+.demo4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #ccc;
+    background-image: linear-gradient(hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, 0));
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    /* box-shadow: 0 20px white inset; */
+    transform: perspective(20px) rotateX(5deg);
+    transform-origin: bottom right;
+}
