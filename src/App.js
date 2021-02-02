@@ -44,7 +44,7 @@ import FuncComponent from './funcComponent/index'
 function App() {
   return (
     <div className="App">
-      <CSS></CSS>
+      {/* <CSS></CSS> */}
       {/* <FuncComponent></FuncComponent> */}
       {/* <HOC></HOC>
       <Nav></Nav> */}
@@ -83,7 +83,7 @@ function App() {
       {/* <Portals></Portals> */}
       {/* <PCPassValue></PCPassValue> */}
       {/* <Context></Context> */}
-      {/* <Hooks></Hooks> */}
+      <Hooks></Hooks>
       {/* <Button /> */}
       {/* <Ceiling></Ceiling> */}
 
