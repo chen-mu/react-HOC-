@@ -46,21 +46,44 @@ const useDocumentClick = (callback) => {
     }, [callback]);
 };
 
+// const Demo = () => {
+//     const [count, setCount] = useState(0);
+//     // 不用useCallback包裹
+//     // useDocumentClick(() => {
+//     //     console.log("document click");
+//     // });
+//     // 使用useCallback包裹
+//     useDocumentClick(
+//         useCallback(() => {
+//             console.log("document click");
+//         }, [])
+//     );
+//     return (
+//         <div>
+//             <button onClick={() => setCount(count + 1)}>click me!</button>
+//         </div>
+//     );
+// };
+
 const Demo = () => {
-    const [count, setCount] = useState(0);
-    // 不用useCallback包裹
-    // useDocumentClick(() => {
-    //     console.log("document click");
-    // });
-    // 使用useCallback包裹
-    useDocumentClick(
-        useCallback(() => {
-            console.log("document click");
-        }, [])
-    );
+    const [temp, setTemp] = useState(5);
+
+    const log = () => {
+        console.log(111111);
+        setTimeout(() => {
+            console.log("3 秒前 temp = 5，现在 temp =", temp);
+        }, 3000);
+    };
+
     return (
-        <div>
-            <button onClick={() => setCount(count + 1)}>click me!</button>
+        <div
+            style={{ marginTop: '200px' }}
+            onClick={() => {
+                setTemp(3);
+                log();
+            }}
+        >
+            就点你
         </div>
     );
 };

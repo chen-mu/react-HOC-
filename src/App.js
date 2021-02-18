@@ -22,10 +22,10 @@ import React from 'react';
 // import SetState from './setState/index'
 // import Portals from './portals/index'
 // import PCPassValue from './PCPassValue/index'
-import Context from './context/index'
+// import Context from './context/index'
 import Hooks from './hooks/index'
-import Nav from './nav/index'
-import CSS from './CSS/index'
+// import Nav from './nav/index'
+// import CSS from './CSS/index'
 // import Ceiling from './ceiling/index'
 
 // import Button from './button/index'
@@ -37,7 +37,7 @@ import CSS from './CSS/index'
 // import Debounce from './debounce/index'
 
 // import HOC from './HOC/index'
-import FuncComponent from './funcComponent/index'
+// import FuncComponent from './funcComponent/index'
 
 
 

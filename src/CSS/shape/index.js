@@ -15,13 +15,21 @@ export default class CSS extends React.Component {
         </div>
             <div className="demo2">
                 11111111111111111111111111111111
-        </div>
-            <div class="clock-box">
-                <div class="clock"></div>
+            </div>
+            <div className="demo6">
+                1111
+            </div>
+            <div className="clock-box">
+                <div className="clock"></div>
             </div>
             <div className="demo4">
-                11
+                1111
             </div>
+
+            <div className="demo5">
+                1111
+            </div>
+
         </div>
     }
 }

@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import UserEffect from './useEffect'
-import UserReducer from './useReducer'
-import Timer from './time'
-import SetState from './setatate'
-import ReactMemo from './reactMemo'
-import UserMemo from './useMemo'
-import UseContext from './useContext'
-import UseImperativeHandle from './useImperativeHandle'
-import UseLayoutEffect from './useLayoutEffect'
-import UseIsGone from "./useIsGone"
+// import UserReducer from './useReducer'
+// import Timer from './time'
+// import SetState from './setatate'
+// import ReactMemo from './reactMemo'
+// import UserMemo from './useMemo'
+// import UseContext from './useContext'
+// import UseImperativeHandle from './useImperativeHandle'
+// import UseLayoutEffect from './useLayoutEffect'
+// import UseIsGone from "./useIsGone"
 
 
 export default class Index extends React.Component {
@@ -26,11 +26,11 @@ export default class Index extends React.Component {
 
     render() {
         return (<div>
-            <UseIsGone></UseIsGone>
+            {/* <UseIsGone></UseIsGone>
             <UseLayoutEffect></UseLayoutEffect>
             <UseImperativeHandle></UseImperativeHandle>
-            <UseContext></UseContext>
-            {/* <UserEffect></UserEffect> */}
+            <UseContext></UseContext> */}
+            <UserEffect></UserEffect>
             {/* <UserReducer></UserReducer> */}
             {/* <Timer></Timer>
             <SetState></SetState> */}
