@@ -23,9 +23,9 @@ import React from 'react';
 // import Portals from './portals/index'
 // import PCPassValue from './PCPassValue/index'
 // import Context from './context/index'
-import Hooks from './hooks/index'
+// import Hooks from './hooks/index'
 // import Nav from './nav/index'
-// import CSS from './CSS/index'
+import CSS from './CSS/index'
 // import Ceiling from './ceiling/index'
 
 // import Button from './button/index'
@@ -38,13 +38,13 @@ import Hooks from './hooks/index'
 
 // import HOC from './HOC/index'
 // import FuncComponent from './funcComponent/index'
-
-
+import remUnit from './rem'
 
 function App() {
+  remUnit()
   return (
     <div className="App">
-      {/* <CSS></CSS> */}
+      <CSS></CSS>
       {/* <FuncComponent></FuncComponent> */}
       {/* <HOC></HOC>
       <Nav></Nav> */}
@@ -83,7 +83,7 @@ function App() {
       {/* <Portals></Portals> */}
       {/* <PCPassValue></PCPassValue> */}
       {/* <Context></Context> */}
-      <Hooks></Hooks>
+      {/* <Hooks></Hooks> */}
       {/* <Button /> */}
       {/* <Ceiling></Ceiling> */}
 
