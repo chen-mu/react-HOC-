@@ -9,8 +9,8 @@ export default class CSS extends React.Component {
 
     render() {
         return <div>
-            {/* <Shape></Shape> */}
-            <Rem></Rem>
+            <Shape></Shape>
+            {/* <Rem></Rem> */}
         </div>;
     }
 }

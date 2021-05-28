@@ -39,12 +39,14 @@ import CSS from './CSS/index'
 // import HOC from './HOC/index'
 // import FuncComponent from './funcComponent/index'
 import remUnit from './rem'
+import Axios from './axios'
 
 function App() {
   remUnit()
   return (
     <div className="App">
-      <CSS></CSS>
+      <Axios></Axios>
+      {/* <CSS></CSS> */}
       {/* <FuncComponent></FuncComponent> */}
       {/* <HOC></HOC>
       <Nav></Nav> */}
