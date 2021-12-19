@@ -2,7 +2,7 @@ import React from 'react';
 // import { Provider } from 'mobx-react';
 // import store from './store';
 // import Home from './pages/home/index'
-// import Bdemo from './compontents/B';
+import Bdemo from './compontents/B';
 // import Ddemo from './compontents/D';
 // import Fdemo from './compontents/F';
 // import Recomment from './pages/recomment/index'
@@ -37,15 +37,17 @@ import CSS from './CSS/index'
 // import Debounce from './debounce/index'
 
 // import HOC from './HOC/index'
-// import FuncComponent from './funcComponent/index'
+import FuncComponent from './funcComponent/index'
 import remUnit from './rem'
-import Axios from './axios'
+// import Axios from './axios'
+import HOCShare from './HOCShare';
 
 function App() {
-  remUnit()
+  // remUnit()
   return (
     <div className="App">
-      <Axios></Axios>
+      <HOCShare/>
+      {/* <Axios></Axios> */}
       {/* <CSS></CSS> */}
       {/* <FuncComponent></FuncComponent> */}
       {/* <HOC></HOC>
@@ -61,8 +63,8 @@ function App() {
       <Provider store={store}>
         <Home></Home>
       </Provider> */}
-      {/* <Demo></Demo> */}
-      {/* <ForwardRef></ForwardRef> */}
+      {/* <Demo></Demo>
+      <ForwardRef></ForwardRef> */}
       {/* <Refcomponent></Refcomponent> */}
       {/* <RefDemo></RefDemo> */}
       {/* <Demo1></Demo1> */}
