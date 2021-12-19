@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // 创建实例时设置配置的默认值
 const instance = axios.create({
-    baseURL: 'http://172.10.3.165:3000',
+    baseURL: 'http://192.168.0.103:3000',
     timeout: 1000,
 });
 
@@ -14,16 +14,13 @@ instance.interceptors.request.use((config) => {
       2、添加每次请求loading等
     */
     config.headers.token = 'token';
-    console.log('请求拦截', config);
+    // console.log('请求拦截', config);
     if (config.method === 'post') {
         config.headers['Content-Type'] = 'application/json';
     }
     if (config.method === 'get') {
         config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
     }
-
-
-
     return config;
 }, function (error) {
     // 对请求错误做些什么
@@ -38,7 +35,7 @@ instance.interceptors.response.use((response) => {
     */
 
     if (response.status === 200) {
-        return response.data.data;
+        return response;
     }
 
     return response;
